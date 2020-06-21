@@ -88,7 +88,7 @@ class Classifier (private val context: Context) {
         val tokenizedText = tokenize(text)
         val paddedMessage = padSequence(tokenizedText)
         val inputs: Array<FloatArray> = arrayOf(paddedMessage.map { it.toFloat() }.toFloatArray())
-        val outputs: Array<FloatArray> = arrayOf(floatArrayOf(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f))
+        val outputs: Array<FloatArray> = arrayOf(floatArrayOf(0.0f))
         interpreter.run(inputs, outputs)
         return outputs[0]
     }
@@ -96,7 +96,7 @@ class Classifier (private val context: Context) {
     companion object {
         private const val MODEL_FILE = "model.tflite"
         private const val DICT_FILE = "dict.json"
-        private const val MAX_LEN = 200
+        private const val MAX_LEN = 500
         private const val MAX_FEATURE_LENGTH = 24222
     }
 
