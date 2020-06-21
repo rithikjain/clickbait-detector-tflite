@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="48dp"
-            android:text="Toxicity Detector"
+            android:text="Clickbait Title Detector"
             android:textColor="#FFFFFF"
             android:textSize="28sp"
             android:textStyle="bold" />
@@ -34,7 +34,7 @@
             android:layout_marginHorizontal="24dp"
             android:layout_marginTop="50dp"
             android:backgroundTint="#FFFFFF"
-            android:hint="Enter text here"
+            android:hint="Enter the title here"
             android:inputType="textMultiLine"
             android:maxLength="250"
             android:scrollbars="vertical"
